@@ -13,14 +13,14 @@
       <table>
         {% for field in form %}
         <tr>
-          <td>{{ form.name.label_tag }}</td>
+          <td>{{ field.label_tag }}</td>
           <td>
-            {{ form.name.errors }}
-            {{ form.name }}
+            {{ field.errors }}
+            {{ field }}
           </td>
           <td>
             {% if field.help_text %}
-            {{ form.name.help_text }}
+            {{ field.help_text }}
             {% endif %}
           </td>
         </tr>

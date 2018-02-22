@@ -1,0 +1,22 @@
+{% extends "cadmin/base.html" %}
+
+{% block title %}Blog - {{ block.super }}{% endblock %}
+
+{% block content %}
+  <div class="content">
+    <div class="section-inner clearfix">
+      <p>Welcome {{ request.user.username }}!</p>
+
+      <p>User details:</p>
+      <ul>
+        <li>Email: {{ request.user.email }}</li>
+        <li>Superuser: {{ request.user.is_superuser }}</li>
+        <li>Staff: {{ request.user.is_staff }}</li>
+        <li>Date Joined: {{ request.user.date_joined }}</li>
+        <li>Last Login: {{ request.user.last_login }}</li>
+      </ul>
+      <p><a href="{% url 'logout' %}">Log Out</a></p>
+
+    </div>
+  </div>
+{% endblock %}

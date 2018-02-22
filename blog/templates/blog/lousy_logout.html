@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% block title %}
+  Lousy Logout - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+
+<div class="content">
+  <div class="section-inner clearfix">
+    <p>You have been logged out. </p>
+    <p>Click <a href="{% url 'lousy_login' %}">here</a> to log in again.</p>
+  </div>
+</div>
+
+{% endblock %}
